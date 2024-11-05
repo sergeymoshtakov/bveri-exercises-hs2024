@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "dl_cv_lectures"
+version = "0.1.2"
+description = "Deep Learning for Computer Vision Lecture Tools"
+authors = [
+    { name = "Marco Willi", email = "marco.willi@fhnw.ch" }
+]
+requires-python = ">= 3.10"
+
+
+dependencies = [
+    # --------- data & analysis -------- #
+    "pandas",
+    "numpy",
+    # --------- visualize -------- #
+    "matplotlib",
+    "seaborn",
+    # --------- data & image processing--------- #
+    "Pillow",
+    "opencv-python-headless",
+    # --------- machine learning --------- #
+    "mlxtend",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "torchmetrics",
+    "torchshow",
+    "torchviz",
+    "torchinfo",
+    "lightning",
+    "transformers",
+    "ray[train, tune]",
+    # --------- Experiment Tracking --------- #
+    "tensorboard",
+    "wandb",
+    # --------- juypter --------- #
+    "jupyter",
+    "ipykernel",
+    "ipywidgets",
+    "xeus-python",
+    "python-gitlab",
+    # --------- Utilities --------- #
+    "tqdm",
+    "python-dotenv",
+    "pyrootutils",
+    "gdown"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "jupyter-black",
+    "argcomplete",
+    "pytest",
+    "mypy",
+    "pre-commit",
+    "rich",
+    "ruff",
+    "isort"
+]
+
+# extra dependencies which are not central
+extra = [
+    "scikit-image",
+    "optuna",
+    "kornia",
+    "captum",
+    "timm",
+    "pyppeteer",
+]
