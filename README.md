@@ -20,6 +20,19 @@ Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/01_pytorch_and_images/pytorch_and_images.ipynb)
 
+### Exercise 02 - MLPs and Images
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/02_mlp_and_images/mlp_and_images.ipynb)
+
+### Exercise 03 - Convolutional Neural Networks
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/03_cnns/cnns.ipynb)
+
+
 ## Local
 
 ```
