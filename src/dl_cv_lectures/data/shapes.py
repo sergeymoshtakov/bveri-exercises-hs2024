@@ -1,8 +1,8 @@
 """Shapes Dataset for Object Localization and Detection.
 
 This dataset generates synthetic images containing random shapes (circles, rectangles, and triangles)
-for object localization and detection tasks. Each image has a specified number of randomly positioned 
-and colored shapes on a customizable background. Each shape's class and bounding box coordinates 
+for object localization and detection tasks. Each image has a specified number of randomly positioned
+and colored shapes on a customizable background. Each shape's class and bounding box coordinates
 are stored as annotations.
 """
 from typing import Callable
@@ -12,30 +12,30 @@ import numpy as np
 import torch
 import torchvision
 import torchvision.transforms.v2.functional as F
-
 from torch.utils.data import Dataset
 
 
 class ShapeDataset(Dataset):
     """
-        Initializes the ShapeDataset with the specified parameters.
+    Initializes the ShapeDataset with the specified parameters.
 
-        Args:
-            num_samples (int): Number of images to generate.
-            img_size (int): The height and width of each generated image in pixels.
-            seed (int): Random seed for reproducibility.
-            max_number_of_shapes_per_image (int): Maximum number of shapes in each image.
-            background (str): Background color, either "random" or "white".
-            transforms (callable, optional): Optional transforms to apply to the images.
+    Args:
+        num_samples (int): Number of images to generate.
+        img_size (int): The height and width of each generated image in pixels.
+        seed (int): Random seed for reproducibility.
+        max_number_of_shapes_per_image (int): Maximum number of shapes in each image.
+        background (str): Background color, either "random" or "white".
+        transforms (callable, optional): Optional transforms to apply to the images.
     """
+
     def __init__(
         self,
-        num_samples: int=1000,
-        img_size: int=256,
-        seed: int=123,
-        max_number_of_shapes_per_image: int=5,
-        background: str="random",
-        transforms: Callable | None=None,
+        num_samples: int = 1000,
+        img_size: int = 256,
+        seed: int = 123,
+        max_number_of_shapes_per_image: int = 5,
+        background: str = "random",
+        transforms: Callable | None = None,
     ):
         self.num_samples = num_samples
         self.img_size = img_size
@@ -136,7 +136,9 @@ class ShapeDataset(Dataset):
 
     def __getitem__(self, idx):
         # Seed the random number generator with a combination of the initial seed and the index
-        self.rng = np.random.default_rng(seed=self.seed + idx)  # Seed with a base seed plus the index
+        self.rng = np.random.default_rng(
+            seed=self.seed + idx
+        )  # Seed with a base seed plus the index
 
         if self.background == "random":
             img = self.rng.integers(0, 256, (self.img_size, self.img_size, 3), dtype=np.uint8)
@@ -146,10 +148,8 @@ class ShapeDataset(Dataset):
         annotations = []
 
         # Generate a deterministic number of shapes per image for this index
-        num_shapes = self.rng.integers(
-            1, self.max_number_of_shapes_per_image + 1
-        )
-        
+        num_shapes = self.rng.integers(1, self.max_number_of_shapes_per_image + 1)
+
         # Draw shapes based on the seeded random generator
         for _ in range(num_shapes):
             choice = self.rng.choice(["circle", "rectangle", "triangle"])

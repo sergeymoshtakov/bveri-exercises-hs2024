@@ -75,12 +75,13 @@ def download_from_gdrive_and_extract_zip(file_id: str, save_path: Path, extract_
 
 def download_file_from_gdrive(file_id: str, download_path: str | Path):
     import gdown
+
     url = f"https://drive.google.com/uc?id={file_id}"
     if download_path.exists():
         print(f"File / path {download_path} already exists, not overwriting")
     else:
-        gdown.download(url, str(download_path), quiet=False)   
-        
+        gdown.download(url, str(download_path), quiet=False)
+
 
 def delete_bad_file(file_path: Path):
     """
