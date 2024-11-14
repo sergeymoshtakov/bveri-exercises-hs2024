@@ -33,6 +33,14 @@ Click on the following badge to open the notebook in Google Colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/03_cnns/cnns.ipynb)
 
 
+### Exercise 04 - Image Classification
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/04_classification/classification.ipynb)
+
+
+
 ## Local
 
 ```
