@@ -2,26 +2,42 @@
 
 This repository is used for the distribution of exercises for bverI Deep Learning (Part 2).
 
-
 There are several ways to work on the assignments:
 
 - Google Colab (easiest)
 - pip  (local install)
 - Docker (only linux/amd64 available)
 
-
 ## Google Colab
 
 Use Google Colab by clicking on the links below.
 
-**Note**: After running the notebook on a compute instance it may gget stuck on the "import" cell. In that case restart the kernel and run again. It should work then.
-
+**Note**: After running the notebook on a compute instance it may get stuck on the "import" cell. In that case, restart the kernel / session and run again. It should work then.
 
 ### Exercise 01 - PyTorch and Image Data
 
 Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/01_pytorch_and_images/pytorch_and_images.ipynb)
+
+### Exercise 02 - MLPs and Images
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/02_mlp_and_images/mlp_and_images.ipynb)
+
+### Exercise 03 - Convolutional Neural Networks
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/03_cnns/cnns.ipynb)
+
+
+### Exercise 04 - Image Classification
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/i4Ds/bveri-exercises-hs2024/blob/main/notebooks/04_classification/classification.ipynb)
 
 
 
@@ -35,10 +51,9 @@ pip install .
 
 ### 1. Install Docker on your computer
 
-Depending on your operating system you have to install docker in different ways.  
+Depending on your operating system you have to install docker in different ways.
 
 You'll find detailed instructions here: https://docs.docker.com/get-docker
-
 
 ### 2. Pull the Docker image
 
@@ -52,7 +67,7 @@ docker pull cr.gitlab.fhnw.ch/ml/courses/bveri/hs2024/bveri-exercises-dev-hs2024
 
 Fork this repository by pressing the fork button on the upper right.
 
-### 4. Clone your fork to your computer. 
+### 4. Clone your fork to your computer.
 
 Clone into your ml directory (`MY_ML_DIR`) using:
 
@@ -83,4 +98,3 @@ docker ps -a
 ### 7. Connect to your container through your browser
 
 Enter `http://localhost:8881/lab` in your browser.
-
